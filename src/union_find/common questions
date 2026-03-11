@@ -1,0 +1,146 @@
+Here are the **5 most important Union-Find interview problems with their LeetCode numbers**. These cover the main DSU patterns used in big tech interviews.
+
+---
+
+## 1️⃣ Number of Provinces
+
+**LeetCode #547**
+
+**Pattern:** Connected Components
+
+You are given an **adjacency matrix** representing connections between cities.
+Return the number of provinces (connected groups).
+
+**Why it matters**
+
+* The **simplest DSU problem**
+* Tests whether you understand **basic union + count**
+
+Key idea:
+
+* Union cities that are connected
+* Return remaining component count
+
+---
+
+## 2️⃣ Redundant Connection
+
+**LeetCode #684**
+
+**Pattern:** Cycle Detection
+
+You are given edges of a graph that originally formed a **tree**, but one extra edge was added.
+
+Return the edge that **creates the cycle**.
+
+Key idea:
+
+If:
+
+```
+find(u) == find(v)
+```
+
+then adding the edge **creates a cycle**.
+
+---
+
+## 3️⃣ Accounts Merge
+
+**LeetCode #721**
+
+**Pattern:** Grouping by shared attribute
+
+Accounts share **emails**.
+Merge accounts belonging to the same person.
+
+Key idea:
+
+* Map **email → account index**
+* Union accounts that share emails
+* Group by root
+
+Tests:
+
+* DSU + HashMap
+* Grouping results
+
+---
+
+## 4️⃣ Number of Islands II
+
+**LeetCode #305**
+
+**Pattern:** Dynamic Union-Find
+
+Grid starts as water.
+Land is added dynamically.
+
+After each addition, return number of islands.
+
+Key idea:
+
+* Convert **2D → 1D index**
+* Union new land with neighbors
+
+Tests:
+
+* Dynamic connectivity
+* Grid DSU
+
+---
+
+## 5️⃣ Minimum Cost to Connect All Points
+
+**LeetCode #1584**
+
+**Pattern:** Minimum Spanning Tree (Kruskal)
+
+Connect all points with **minimum cost**.
+
+Key idea:
+
+1. Compute all edges
+2. Sort by weight
+3. Union if not connected
+
+Tests:
+
+* Kruskal’s algorithm
+* DSU cycle detection
+
+---
+
+# ⭐ Bonus (Very Frequently Asked)
+
+## 6️⃣ Graph Valid Tree
+
+**LeetCode #261**
+
+Determine if a graph is a **valid tree**.
+
+Conditions:
+
+* No cycles
+* Exactly **n-1 edges**
+
+Union-Find solution is very clean.
+
+---
+
+# 🧠 If preparing for big tech
+
+A **strong DSU preparation order** is:
+
+1. **547** – Number of Provinces
+2. **684** – Redundant Connection
+3. **261** – Graph Valid Tree
+4. **721** – Accounts Merge
+5. **305** – Number of Islands II
+6. **1584** – Minimum Cost to Connect Points
+
+This sequence gradually increases difficulty.
+
+---
+
+If you'd like, I can also show you the **7 most common Union-Find interview mistakes** (these are things that cause many candidates to fail even when they know DSU).

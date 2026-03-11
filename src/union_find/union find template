@@ -1,0 +1,204 @@
+Here is the **clean FAANG-level Union-Find mental template** interviewers expect in **Java**.
+I’ll describe the **structure and reasoning**, without full code logic so you can still implement it yourself.
+
+---
+
+# 1️⃣ Core Idea of Union-Find (DSU)
+
+Union-Find manages **disjoint sets** and supports two operations:
+
+* **find(x)** → find the root (representative) of the component
+* **union(a, b)** → merge two components
+
+Optimizations interviewers expect:
+
+1. **Path Compression**
+2. **Union by Rank or Size**
+
+These give near **O(α(n))** time (almost constant).
+
+---
+
+# 2️⃣ Standard Class Structure
+
+Interviewers usually expect something like this conceptually:
+
+```
+UnionFind
+ ├── parent[]
+ ├── rank[] or size[]
+ ├── count
+ ├── constructor(n)
+ ├── find(x)
+ ├── union(a, b)
+ └── getCount()
+```
+
+### Fields
+
+**parent[]**
+
+* parent of each node
+* root nodes point to themselves
+
+**rank[] or size[]**
+
+* helps keep trees shallow
+
+**count**
+
+* number of connected components
+
+---
+
+# 3️⃣ Constructor Responsibility
+
+Constructor should:
+
+1. Create arrays
+2. Initialize parents
+3. Initialize rank/size
+4. Set `count = n`
+
+Mental model:
+
+```
+for each node i:
+    parent[i] = i
+    rank[i] = 1
+```
+
+Every node starts as **its own component**.
+
+---
+
+# 4️⃣ `find(x)` — Path Compression
+
+Goal:
+
+Find the **root of x**.
+
+Optimization:
+
+Make every node on the path **directly point to root**.
+
+Conceptually:
+
+```
+if x is not root
+    compress path
+return root
+```
+
+This is the **most recognizable interview implementation**.
+
+---
+
+# 5️⃣ `union(a, b)` — Merge Components
+
+Steps interviewers expect:
+
+1. Find root of `a`
+2. Find root of `b`
+3. If same root → already connected
+4. Otherwise merge smaller tree into larger
+5. Decrement component count
+
+Conceptual flow:
+
+```
+rootA = find(a)
+rootB = find(b)
+
+if rootA == rootB
+    return false
+
+attach smaller rank tree under larger
+
+count--
+return true
+```
+
+---
+
+# 6️⃣ `getCount()`
+
+Just returns:
+
+```
+count
+```
+
+Used for problems like:
+
+* Number of connected components
+* Number of provinces
+* Network connectivity
+
+---
+
+# 7️⃣ Expected API (Interview Friendly)
+
+Typical usage:
+
+```
+UnionFind uf = new UnionFind(n)
+
+for each edge (a,b):
+    uf.union(a,b)
+
+return uf.getCount()
+```
+
+Clean and readable.
+
+---
+
+# 8️⃣ Why This Template Is FAANG-Friendly
+
+Because it demonstrates:
+
+✅ Encapsulation
+✅ Correct DSU optimizations
+✅ Clean API
+✅ No unnecessary parameters
+✅ Easy reuse across problems
+
+---
+
+# 9️⃣ Problems Where This Exact Template Works
+
+You can reuse it directly for:
+
+* **Connected Components**
+* **Number of Provinces**
+* **Redundant Connection**
+* **Accounts Merge**
+* **Graph Valid Tree**
+* **Kruskal MST**
+* **Number of Islands II**
+
+---
+
+# 🔟 One Senior-Level Tip
+
+Strong candidates also add:
+
+```
+connected(a,b)
+```
+
+Which internally checks:
+
+```
+find(a) == find(b)
+```
+
+Interviewers like this because it **improves readability in graph problems**.
+
+---
+
+✅ If you'd like, I can also show you:
+
+* **The 5 Union-Find interview problems that cover 90% of FAANG questions**
+* **A tricky DSU bug that even senior engineers often write**.
