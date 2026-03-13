@@ -15,7 +15,11 @@
 //The front of the deque always contains the index of the maximum element in the current window.
 //When the window moves, we remove indices that fall outside the window.
 
-package sliding_window;
+//Monotonic stacks and queues optimize problems to by maintaining ordered elements.
+//Use a Monotonic Stack(LIFO)to find the next/previous greater/smaller element
+//(e.g.,daily temperatures).Use a Monotonic Queue(Deque-FIFO)to find the maximum/minimum value in a sliding window.
+
+        package sliding_window;
 
 import java.util.*;
 

@@ -1,0 +1,144 @@
+The faster solution for **Longest Increasing Subsequence** uses **binary search + patience sorting** and runs in **O(n log n)** time instead of O(n²).
+
+---
+
+# 🧠 Intuition (Patience Sorting Idea)
+
+Imagine placing numbers like **cards into piles**.
+
+Rules:
+
+1. Each pile is **sorted increasing from bottom to top**.
+2. Place the current number on the **leftmost pile whose top ≥ number**.
+3. If no such pile exists → **create a new pile**.
+
+The **number of piles = length of LIS**.
+
+Example:
+
+```
+nums = [10,9,2,5,3,7,101,18]
+```
+
+Steps:
+
+```
+10 → [10]
+9  → [9]
+2  → [2]
+5  → [2,5]
+3  → [2,3]
+7  → [2,3,7]
+101 → [2,3,7,101]
+18  → [2,3,7,18]
+```
+
+Result:
+
+```
+Length = 4
+```
+
+Actual LIS:
+
+```
+[2,3,7,18]
+```
+
+---
+
+# ⚡ Key Idea
+
+We maintain an array:
+
+```
+tails[i] = smallest ending number of an increasing subsequence of length i+1
+```
+
+---
+
+# ✅ Java Implementation (O(n log n))
+
+```java
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+
+        int[] tails = new int[nums.length];
+        int size = 0;
+
+        for(int num : nums){
+
+            int left = 0;
+            int right = size;
+
+            while(left < right){
+                int mid = (left + right) / 2;
+
+                if(tails[mid] < num){
+                    left = mid + 1;
+                } else {
+                    right = mid;
+                }
+            }
+
+            tails[left] = num;
+
+            if(left == size) size++;
+        }
+
+        return size;
+    }
+}
+```
+
+---
+
+# 🔍 What Happens Internally
+
+Example:
+
+```
+nums = [0,1,0,3,2,3]
+```
+
+`tails` evolves like:
+
+```
+[0]
+[0,1]
+[0,1]
+[0,1,3]
+[0,1,2]
+[0,1,2,3]
+```
+
+Final length:
+
+```
+4
+```
+
+---
+
+# ⏱ Complexity
+
+| Method             | Time       | Space |
+| ------------------ | ---------- | ----- |
+| DP (your solution) | O(n²)      | O(n)  |
+| Binary search LIS  | O(n log n) | O(n)  |
+
+---
+
+# ❗ Important Interview Detail
+
+The `tails` array **does NOT store the actual LIS**, only enough information to compute its **length**.
+
+Interviewers often ask:
+
+> "Can you also return the actual subsequence?"
+
+That requires **extra arrays for parent tracking**.
+
+---
+
+✅ If you'd like, I can show the **clean trick to reconstruct the actual LIS sequence in O(n log n)** — which is a **very impressive interview solution**.
