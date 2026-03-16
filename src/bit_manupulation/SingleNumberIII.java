@@ -1,0 +1,32 @@
+//https://leetcode.com/problems/single-number-iii/submissions/1949025789/
+
+//| Complexity     | Analysis                                                          |
+//| -------------- | ----------------------------------------------------------------- |
+//| **Time** O(n)  | Iterate the array **twice**: once for XOR, once for partition/XOR |
+//| **Space** O(1) | Only a few integer variables; no extra arrays or hashmaps         |
+
+//Approach (2–3 lines)
+//XOR all numbers → get xor = a ^ b of the two uniques.
+//Find a set bit in xor → partition numbers into two groups based on this bit.
+//XOR each group → duplicates cancel, leaving the two unique numbers.
+
+package bit_manupulation;
+
+public class SingleNumberIII {
+    public int[] singleNumber(int[] nums) {
+        int xOr=nums[0];
+        int[] res = new int[2] ;
+        for(int index = 1; index < nums.length; index++){
+            xOr ^= nums[index];
+        }
+
+        int commonBit = xOr & -xOr;
+
+        for(int num:nums){
+            if((num & commonBit)==0) res[0]^=num;
+            else res[1]^=num;
+        }
+
+        return res;
+    }
+}
