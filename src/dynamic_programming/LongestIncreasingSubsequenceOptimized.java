@@ -1,12 +1,10 @@
-//Todo: Understand in depth
+//Todo: Understand this solution
 //| Method             | Time       | Space |
 //| ------------------ | ---------- | ----- |
 //| DP (your solution) | O(n²)      | O(n)  |
 //| Binary search LIS  | O(n log n) | O(n)  |
 
-package DynamicProgramming;
-
-import java.util.Arrays;
+package dynamic_programming;
 
 class LongestIncreasingSubsequenceOptimized {
     public int lengthOfLIS(int[] nums) {

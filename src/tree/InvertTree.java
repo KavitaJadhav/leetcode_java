@@ -27,10 +27,10 @@ package tree;
 class InvertTree {
     public TreeNode invertTree(TreeNode node) {
         if(node==null) return null;
-        TreeNode temp = node.right;
         invertTree(node.left);
         invertTree(node.right);
 
+        TreeNode temp = node.right;
         node.right = node.left;
         node.left = temp;
 

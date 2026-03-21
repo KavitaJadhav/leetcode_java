@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/single-number-ii/submissions/1948997701/
+//https://leetcode.com/problems/single-number-ii
 
 //Approach (2–3 lines)
 //Use two bitmask variables one and two to track bits appearing 1 time and 2 times modulo 3.
@@ -13,8 +13,14 @@
 //| **Space** O(1) | Only two integer variables `one` and `two` are used (constant space) |
 
 
-//Other Solutions:
+//Other Solutions: Todo: Explore it and implement
 //https://www.youtube.com/watch?v=cOFAmaMBVps
+
+//Simple Mental Model 🧩
+//Think of it as a base-3 counter for every bit implemented with two registers.
+//one → bits seen once
+//two → bits seen twice
+//third occurrence → clear both
 
 package bit_manupulation;
 

@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/split-array-largest-sum/
+package binary_search;//https://leetcode.com/problems/split-array-largest-sum/
 //We binary search the answer between the maximum element and total array sum.
 //For each candidate maximum sum, we greedily create subarrays and count how many are required.
 //If more than k subarrays are needed, the candidate sum is too small, otherwise it is valid and we try to minimize it.
@@ -7,8 +7,8 @@
 //Space Complexity: O(1)
 //log(sum(nums)) = binary search space
 //n = scan array each iteration
-
-class Solution {
+import java.util.*;
+class ArraySplitSumLarge {
     public int splitArray(int[] nums, int k) {
         int total = Arrays.stream(nums).sum();
         int min = Arrays.stream(nums).max().getAsInt();

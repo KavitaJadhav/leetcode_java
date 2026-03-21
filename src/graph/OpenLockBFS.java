@@ -51,9 +51,9 @@ public class OpenLockBFS {
         }
     }
 
-    public int openLock(String[] deadends, String target) {
+    public int openLock(String[] deadEnds, String target) {
 
-        Set<String> visitedSet = new HashSet<>(Arrays.asList(deadends));
+        Set<String> visitedSet = new HashSet<>(Arrays.asList(deadEnds));
         Queue<Lock> queue = new ArrayDeque<>();
 
         if(visitedSet.contains("0000")) return -1;

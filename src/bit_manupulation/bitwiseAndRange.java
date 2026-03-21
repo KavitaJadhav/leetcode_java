@@ -5,6 +5,13 @@
 //| **Time** O(log n) | Each iteration shifts `m` and `n` right until equal |
 //| **Space** O(1)    | Constant extra variables                            |
 
+//If asked:
+//Why O(log N)?
+//Because each iteration right-shifts the number, effectively dividing it by 2. The number of times we can divide N by 2 is log₂N.
+//
+//Follow-up (why not O(32)?)
+//Since integers are fixed to 32 bits in Java, the loop runs at most 32 times, so practically it's O(1). But theoretically we express it as O(log N).
+
 //Interview Summary (2–3 lines)
 //Keep shifting m and n right until they match to find the common prefix. Shift the prefix back to get the AND of the full range.
 

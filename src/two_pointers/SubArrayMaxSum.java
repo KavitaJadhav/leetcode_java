@@ -13,6 +13,9 @@
 //| 209. Minimum Size Subarray Sum          | Min length ≥ target     | int     |
 //| 325. Maximum Size Subarray Sum Equals k | Max length with sum = k | int     |
 
+//Kadane’s Algorithm (Greedy + DP)
+//At each index, we decide whether to extend the current subarray or start a new one. We track the maximum sum seen so far, giving an O(n) solution.
+
 
 package two_pointers;
 

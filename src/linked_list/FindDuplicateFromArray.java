@@ -11,7 +11,7 @@
 //Reset slow to start and move both one step at a time to find the entrance of the cycle.
 //The entrance is the duplicate number.
 
-package LinkedList;
+package linked_list;
 
 public class FindDuplicateFromArray {
 

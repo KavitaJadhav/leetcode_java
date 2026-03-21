@@ -33,10 +33,9 @@ public class AlienDictionary {
 
         Map<Character, List<Character>> dependencyMap = buildDependencyMap(words);
 
-        Set<Character> letters = new HashSet<>(dependencyMap.keySet());
         Set<Character> visited = new HashSet<>();
         Set<Character> visiting = new HashSet<>();
-        for (Character letter : letters) {
+        for (Character letter : dependencyMap.keySet()) {
             if (!dfs(letter, dependencyMap, result, visited, visiting)) return "";
         }
         return result.toString();

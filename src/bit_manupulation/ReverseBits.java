@@ -19,6 +19,7 @@ public class ReverseBits {
     }
 }
 
+//Todo: understand this approach
 //Approach 2: Divide & Conquer (faster with masks)
 //You can also reverse bits in parallel using bit masks and shifts (useful if called multiple times):
 

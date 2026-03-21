@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/koko-eating-bananas/
 //⏱ Complexity
 //
 //Time → O(n log m)
@@ -10,8 +11,8 @@ package binary_search;
 
 import java.util.Arrays;
 
-class Solution {
-    public int CocoEatingBanana(int[] piles, int hours) {
+class CocoEatingBanana {
+    public int minEatingSpeed(int[] piles, int hours) {
         int upperLimit = Arrays.stream(piles).max().getAsInt();
         int lowerLimit = 1;
         int hoursToFinish, midLimit;

@@ -4,7 +4,7 @@
 //| Time   | O(n)       |
 //| Space  | O(1)       |
 
-package LinkedList;
+package linked_list;
 
 public class DetectLoop {
 

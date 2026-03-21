@@ -1,4 +1,4 @@
-package ArrayReversal;
+package array_reversal;
 
 //https://leetcode.com/problems/rotate-array/
 ////| Operation | Complexity |

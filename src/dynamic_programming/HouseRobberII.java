@@ -4,7 +4,7 @@
 //| Time   | O(n)  |
 //| Space  | O(n)  |
 
-package DynamicProgramming;
+package dynamic_programming;
 
 class HouseRobberII {
     public int rob(int[] nums) {

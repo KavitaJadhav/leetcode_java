@@ -1,4 +1,5 @@
-package tree;
+//https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/
+ package tree;
 
 public class TreePrePostTravel {
     /**
@@ -17,7 +18,7 @@ public class TreePrePostTravel {
      * }
      */
         private TreeNode build(int[] preOrder, int[] inOrder, int preStart, int preEnd, int inStart, int inEnd){
-            if(preStart > preEnd  || inStart >inEnd  ) return null;
+            if(preStart > preEnd  || inStart > inEnd  ) return null;
 
             int root = preOrder[preStart];
             int rootIndex = -1;

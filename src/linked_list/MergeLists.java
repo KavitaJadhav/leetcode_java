@@ -10,7 +10,7 @@
 //Compare nodes from both lists, append the smaller to the merged list, move pointers forward.
 //After one list ends, attach the remaining nodes from the other list.
 
-package LinkedList;
+package linked_list;
 
 public class MergeLists {
 

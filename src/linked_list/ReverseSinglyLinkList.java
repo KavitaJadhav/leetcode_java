@@ -14,9 +14,7 @@
 //| Time   | O(n)       |
 //| Space  | O(1)       |
 
-package LinkedList;
-
-import java.util.*;
+package linked_list;
 
 public class ReverseSinglyLinkList {
 

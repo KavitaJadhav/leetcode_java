@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/validate-binary-search-tree/description/
 package tree;
 
 //| DFS Type  | Time Complexity | Space Complexity |
@@ -9,16 +10,16 @@ package tree;
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
+ * int val;
+ * TreeNode left;
+ * TreeNode right;
+ * TreeNode() {}
+ * TreeNode(int val) { this.val = val; }
+ * TreeNode(int val, TreeNode left, TreeNode right) {
+ * this.val = val;
+ * this.left = left;
+ * this.right = right;
+ * }
  * }
  */
 public class TreeNode {
@@ -27,7 +28,8 @@ public class TreeNode {
     TreeNode right;
 
     // Default constructor
-    public TreeNode() {}
+    public TreeNode() {
+    }
 
     // Constructor with value
     public TreeNode(int val) {
@@ -43,11 +45,12 @@ public class TreeNode {
 }
 
 class ValidateBST {
-    private boolean validate(TreeNode node, long minValue, long maxValue){
-        if(node==null) return true;
-        if(node.val <= minValue || node.val >= maxValue) return false;
-        return validate(node.left, minValue, node.val) &&         validate(node.right,  node.val, maxValue);
+    private boolean validate(TreeNode node, long minValue, long maxValue) {
+        if (node == null) return true;
+        if (node.val <= minValue || node.val >= maxValue) return false;
+        return validate(node.left, minValue, node.val) && validate(node.right, node.val, maxValue);
     }
+
     public boolean isValidBST(TreeNode root) {
         return validate(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }

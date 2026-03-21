@@ -3,7 +3,8 @@
 //| Original substring-check | O(n × m²)                                  | O(n × m)         | Checks all rotations for each string using substring                         |
 //| Canonical key map        | O(n × m²) (current) → O(n × m) (optimized) | O(n × m)         | Groups by lexicographically smallest rotation; faster if no substring copies |
 
-        package string_rotation;
+//Todo: forgot this approach. revisit.
+package string_rotation;
 
 import java.util.*;
 

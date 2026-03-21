@@ -1,6 +1,5 @@
 //https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 
-import java.sql.Time;
 //⏱ Complexity
 //Binary search over capacity.
 //Time:  O(N log S)
@@ -10,11 +9,14 @@ import java.sql.Time;
 //N = number of packages
 //S = sum(weights)
 //Note: s-> sum(weights), as search will be tracked down from sum count.
-
 package binary_search;
-class Solution {
+import java.util.*;
+class ShipPackagesDDays {
     public int shipWithinDays(int[] weights, int days) {
         int minCapacity = Arrays.stream(weights).max().getAsInt();
+//        Therefore the minimum possible capacity must be at least the largest weight.
+//        If the ship capacity is smaller than the largest package, that package can never be shipped.
+
         int maxCapacity = Arrays.stream(weights).sum();
         int daysToShip;
         int weightsSum;

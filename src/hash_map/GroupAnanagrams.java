@@ -35,8 +35,6 @@ class GroupAnanagrams {
             anagramsMap.get(key).add(string);
         }
 
-        List<List<String>> result = new ArrayList<>();
-
         return new ArrayList<>(anagramsMap.values());
     }
 }

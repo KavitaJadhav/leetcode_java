@@ -8,7 +8,7 @@
 //Approach Summary:
 //Find middle → reverse second half → compare halves → return true/false.
 
-package LinkedList;
+package linked_list;
 
 public class PalindromeList {
 

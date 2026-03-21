@@ -5,7 +5,7 @@
 //| Space  | O(n)  |
 
 
-        package DynamicProgramming;
+        package dynamic_programming;
 
 import java.util.*;
 

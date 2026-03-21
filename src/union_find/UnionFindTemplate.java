@@ -1,3 +1,4 @@
+//Copied template. Todo: understand the template and make a template with base object to be used everywhere
 package union_find;
 
 class UnionFind {

@@ -18,7 +18,7 @@
 //| Time   | O(amount × coins) |
 //| Space  | O(amount)         |
 
- package DynamicProgramming;
+ package dynamic_programming;
 import java.util.*;
 public class CoinChangeI {
     public int coinChange(int[] coins, int amount) {

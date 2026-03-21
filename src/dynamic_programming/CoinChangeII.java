@@ -36,7 +36,7 @@
 //Result:
 //dp[5] = 4
 
- package DynamicProgramming;
+ package dynamic_programming;
 
 
 public class CoinChangeII {

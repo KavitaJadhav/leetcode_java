@@ -60,7 +60,7 @@ tails[i] = smallest ending number of an increasing subsequence of length i+1
 # ✅ Java Implementation (O(n log n))
 
 ```java
-class Solution {
+class ShipPackagesDDays {
     public int lengthOfLIS(int[] nums) {
 
         int[] tails = new int[nums.length];

@@ -38,7 +38,7 @@ package string_rotation;
 import java.util.*;
 
 public class GroupRotatedStrings {
-    private List<List<String>> group(List<String> list) {
+    List<List<String>> group(List<String> list) {
         List<List<String>> result = new ArrayList<>();
         Set<String> unGrouped = new HashSet<>(list);
 

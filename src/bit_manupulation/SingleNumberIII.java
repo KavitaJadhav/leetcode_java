@@ -10,6 +10,12 @@
 //Find a set bit in xor → partition numbers into two groups based on this bit.
 //XOR each group → duplicates cancel, leaving the two unique numbers.
 
+//Core Intuition
+//The algorithm has 3 ideas:
+//XOR all numbers → duplicates cancel
+//Find a bit where the two unique numbers differ
+//Split numbers into two groups using that bit
+
 package bit_manupulation;
 
 public class SingleNumberIII {

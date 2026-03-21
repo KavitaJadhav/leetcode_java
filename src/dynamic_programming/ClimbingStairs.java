@@ -4,7 +4,10 @@
 //| Time   | O(n)  |
 //| Space  | O(1)  |
 
-        package DynamicProgramming;
+//Climbing Stairs:
+//Number of ways to reach the top = sum of ways from next step and next-next step (ways[i] = ways[i+1] + ways[i+2]). Initialized last step as 1 and second-last as 2; basically a Fibonacci pattern.
+
+        package dynamic_programming;
 
 class ClimbingStairs {
     public int climbStairs(int num) {

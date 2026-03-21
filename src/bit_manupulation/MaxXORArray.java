@@ -14,7 +14,7 @@
 //| Approach      | Time  | Space  | Interview Frequency |
 //| ------------- | ----- | ------ | ------------------- |
 //| Brute Force   | O(n²) | O(1)   | Rare                |
-//| Greedy Prefix | O(n)  | O(n)   | ⭐ Very Common       |
+//| Greedy Prefix | O(n)  | O(n)   | ⭐ Very Common       | Todo: explore this solution
 //| Trie          | O(n)  | O(32n) | ⭐⭐ Very Common      |
 
 package bit_manupulation;

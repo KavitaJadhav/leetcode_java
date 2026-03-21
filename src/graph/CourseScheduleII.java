@@ -45,6 +45,8 @@ public class CourseScheduleII {
         if (visitedCourses.contains(course)) return true;
         if (visitingCourses.contains(course)) return false; // cycle detected
 
+//        Todo: Optimise by adding course at index 0; unshift complexity o(n),
+//        check alternative like linkedList.. worth it? extra pointers,
         visitingCourses.add(course);
 
         for (int prereq : courseDependencyMap.get(course)) {

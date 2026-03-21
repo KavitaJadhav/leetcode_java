@@ -1,3 +1,6 @@
+//https://leetcode.com/problems/network-delay-time/
+//Todo: add complexity
+
 package graph;
 
 import java.util.*;
@@ -25,6 +28,7 @@ public class NetworkDelayDijkstra {
 
         Set<Integer> visited = new HashSet<>();
         PriorityQueue<Edge> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(edge -> edge.distance));
+//        PriorityQueue<Edge> priorityQueue = new PriorityQueue<>((a, b) -> a.distance - b.distance);
         Map<Integer, Integer> distancemap = new HashMap<>();
 
         for (int node = 1; node <= nodes; node++) {

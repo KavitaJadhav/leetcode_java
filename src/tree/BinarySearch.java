@@ -23,7 +23,7 @@ public class BinarySearch {
         int mid = (list.length / 2);
 
         this.right = Arrays.copyOfRange(list, 0, mid);
-        this.left = Arrays.copyOfRange(list, 1, list.length);
+        this.left = Arrays.copyOfRange(list, mid + 1, list.length);
 
         if (number >= left[0])
             return present(left, number);

@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/submissions/1945133280/
+//https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 //| Metric | Complexity |
 //| ------ | ---------- |
 //| Time   | **O(n)**   |

@@ -20,6 +20,7 @@ package tree;
  *     TreeNode(int x) { val = x; }
  * }
  */
+import java.util.*;
 public class SerializeDeserialize {
     private int index = 0;
     private void dfs_serialize(TreeNode node, List<String> result){

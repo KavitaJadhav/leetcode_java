@@ -1,9 +1,10 @@
+//https://leetcode.com/problems/house-robber/description/
 //| Metric | Value |
 //| ------ | ----- |
 //| Time   | O(n)  |
 //| Space  | O(n)  |
 
-package DynamicProgramming;
+package dynamic_programming;
 
 class HouseRobberI {
     public int rob(int[] nums) {

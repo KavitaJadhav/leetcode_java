@@ -3,6 +3,8 @@
 //| Time   | O(n)                  |
 //| Space  | O(n) for output array |
 
+//“This is Kadane’s algorithm with index tracking. We track the start of the current subarray and update global start/end indices whenever we find a better sum.”
+
 package two_pointers;
 
 import java.util.*;
