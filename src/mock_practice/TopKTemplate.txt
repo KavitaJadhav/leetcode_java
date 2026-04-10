@@ -1,0 +1,64 @@
+🧩 2. Gold Standard Pattern
+✅ Step 1: Define metric
+Distance, score, frequency, etc.
+✅ Step 2: Choose heap type
+Maintain k elements only
+✅ Step 3: Insert + trim
+Add element
+If size > k → remove worst
+✅ Step 4: Extract + order
+Poll heap OR convert to list and sort
+
+public int[] topK(List<Driver> drivers, Rider rider, int k) {
+
+    PriorityQueue<Driver> heap = new PriorityQueue<>(
+        (a, b) -> {
+            if (b.distance != a.distance)
+                return b.distance - a.distance; // max heap
+            return b.id - a.id;
+        }
+    );
+
+    for (Driver d : drivers) {
+
+        int dist = (d.x - rider.x) * (d.x - rider.x)
+                 + (d.y - rider.y) * (d.y - rider.y);
+
+        d.setDistance(dist);
+
+        heap.offer(d);
+
+        if (heap.size() > k) {
+            heap.poll(); // remove farthest
+        }
+    }
+
+    // Extract and sort final k
+    List<Driver> resultList = new ArrayList<>(heap);
+
+    resultList.sort((a, b) -> {
+        if (a.distance != b.distance)
+            return a.distance - b.distance; // closest first
+        return a.id - b.id;
+    });
+
+    int[] result = new int[k];
+    for (int i = 0; i < k; i++) {
+        result[i] = resultList.get(i).id;
+    }
+
+    return result;
+}
+
+
+6. Mental Shortcut (Interview Cheat Sheet)
+
+When you see:
+
+“closest k”
+“largest k”
+“top k frequent”
+
+👉 Immediately think:
+
+“Heap + size k + trim + final sort if needed”

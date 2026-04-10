@@ -30,7 +30,7 @@ SlidingWindow/
 TwoPointers/
 BinarySearch/
 Graphs/
-dynamic_programming/
+patterns.dynamic_programming/
 ```
 
 Each folder contains:
