@@ -7,7 +7,7 @@
 //Climbing Stairs:
 //Number of ways to reach the top = sum of ways from next step and next-next step (ways[i] = ways[i+1] + ways[i+2]). Initialized last step as 1 and second-last as 2; basically a Fibonacci pattern.
 
-        package patterns.dynamic_programming;
+package patterns.dynamic_programming;
 
 class ClimbingStairs {
     public int climbStairs(int num) {
@@ -23,5 +23,21 @@ class ClimbingStairs {
         }
 
         return result[0];
+    }
+
+    //todo: explore
+    public int climbStairs1(int n) {
+        if (n <= 2) return n;
+
+        int prev2 = 1; // f(n-2)
+        int prev1 = 2; // f(n-1)
+
+        for (int i = 3; i <= n; i++) {
+            int current = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = current;
+        }
+
+        return prev1;
     }
 }

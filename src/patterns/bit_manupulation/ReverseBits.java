@@ -15,6 +15,10 @@ public class ReverseBits {
             n >>>= 1; //shifting last index and reassigning remaining value to n
         }
 
+//        for (int index = 0; index < 32; index++) {
+//            result <<= 1;
+//            result |= (n >> index) & 1;
+//        }
         return result;
     }
 }

@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/description/
+//https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
 //https://github.com/KavitaJadhav/data_structure_questions/blob/main/ds_patterns/union_find/connected_componenets.rb
 //https://www.youtube.com/watch?v=8f1XPm4WOUc
 
@@ -30,16 +30,9 @@ public class ConnectedComponents {
         }
 
         public int find(Integer number) {
-            Integer parent = this.parent[number];
-            if (parent == number) return parent;
-
-            //            while (parent != number) {
-//                parent = this.parent[parent];
-//            }
-//            return parent;
-
-//            Implement path compression with recursion
-            return this.find(parent);
+            if (parent[number] != number)
+                parent[number] = find(parent[number]); //Implement path compression with recursion
+            return parent[number];
         }
 
         public boolean union(Integer component1, Integer component2) {

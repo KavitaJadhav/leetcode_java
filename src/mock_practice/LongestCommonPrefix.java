@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/longest-common-prefix/
 //This is the classic Longest Common Prefix (LCP) problem.
 //Given your constraints (array size ≤ 200, string length ≤ 200), a simple and efficient approach works perfectly.
 

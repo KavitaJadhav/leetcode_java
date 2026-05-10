@@ -7,8 +7,14 @@
 //
 //Time:  O(m*n log(m*n))
 //Space: O(m*n)
+//Operations:
+//Push to heap: O(log(m·n))
+//Pop from heap: O(log(m·n))
+//Total:
+//Nodes processed: m * n
+//Heap ops per node: log(m * n)
 
-package patterns.graph;
+        package patterns.graph;
 
 import java.util.*;
 

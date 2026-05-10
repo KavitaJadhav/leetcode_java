@@ -1,4 +1,10 @@
 //https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal
+//| Metric | Complexity |
+//| ------ | ---------- |
+//| Time   | ❌ O(n²)    |
+//| Space  | O(n)       |
+//| Stack  | O(h)       |
+//
  package patterns.tree;
 
 public class TreePrePostTravel {

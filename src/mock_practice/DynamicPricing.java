@@ -1,3 +1,12 @@
+//Design a function for a ride-hailing platform that calculates pricing based on supply (drivers) and demand (ride requests) per time slot.
+//
+//Input:
+//baseFare (int)
+//drivers[] (int array)
+//requests[] (int array)
+//Output:
+//result[] where each index represents total revenue (or adjusted pricing) for that time slot
+
 package mock_practice;
 
 import java.util.Arrays;

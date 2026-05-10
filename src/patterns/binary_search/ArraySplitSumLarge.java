@@ -1,4 +1,5 @@
-package patterns.binary_search;//https://leetcode.com/problems/split-array-largest-sum/
+package patterns.binary_search;
+//https://leetcode.com/problems/split-array-largest-sum/
 //We binary search the answer between the maximum element and total array sum.
 //For each candidate maximum sum, we greedily create subarrays and count how many are required.
 //If more than k subarrays are needed, the candidate sum is too small, otherwise it is valid and we try to minimize it.
@@ -16,7 +17,6 @@ class ArraySplitSumLarge {
 
         while (min < max) {
             int mid = min + ((max - min) / 2);
-            int index = 0;
             int subArrays = 1;
             int sum = 0;
 

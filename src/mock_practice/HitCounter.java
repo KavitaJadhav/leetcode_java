@@ -1,3 +1,4 @@
+//https://algo.monster/liteproblems/362
 //* https://leetcode.com/problems/design-hit-counter/
 // LeetCode: Design Hit Counter
 package mock_practice;

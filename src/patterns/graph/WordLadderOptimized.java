@@ -1,15 +1,6 @@
-//🔥 Show optimized Word Ladder
-//
-//🔥 Show bidirectional BFS (very important for big interviews)
-//
-//🔥 Walk through dry run step-by-step
-//
-//🔥 Give you production-ready BFS template to memorize
-
 //Complexity
-//Time: O(N × L) (N = words, L = word length)
-//Space: O(N × L) for pattern map + BFS queue
-
+//Time:O(N × L²) (N = words, L = word length)
+//Space:O(N × L²) for pattern map + BFS queue
 package patterns.graph;
 
 import java.util.*;

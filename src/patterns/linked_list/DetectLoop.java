@@ -29,9 +29,9 @@ public class DetectLoop {
         ListNode fast = head;
         ListNode slow = head;
 
-        while (slow != null && fast.next != null) {
+        while (fast != null && fast.next != null) { //Slow will be inbound if fast is inbound
             slow = slow.next;
-            fast = fast.next.next;
+            fast = fast.next.next; //fast can be nil here, so loop will end in next iteration
             if (slow == fast) return true;
         }
         return false;

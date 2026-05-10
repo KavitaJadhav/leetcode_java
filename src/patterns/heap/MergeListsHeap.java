@@ -2,7 +2,7 @@
 //| Metric | Value          |
 //| ------ | -------------- |
 //| Time   | **O(N log K)** |
-//| Space  | **O(1)**       |
+//| Space  | **O(K)**       |
 //Where
 //N = total nodes
 //K = number of lists

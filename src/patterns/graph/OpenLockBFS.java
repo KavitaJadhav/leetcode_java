@@ -16,8 +16,16 @@
 //easier to reason about
 //Your solution is correct conceptually, but the string BFS is the industry-standard approach.
 
+//Rule to remember
+//| Graph Type | Algorithm                   |
+//| ---------- | --------------------------- |
+//| Unweighted | ✅ BFS (Queue)               |
+//| Weighted   | ✅ Dijkstra (Priority Queue) |
+
 package patterns.graph;
-    import java.util.*;
+
+import java.util.*;
+
 public class OpenLockBFS {
 
     class Lock {
@@ -32,19 +40,19 @@ public class OpenLockBFS {
 
         private List<Lock> childrens() {
 
-            if(!children.isEmpty()) return children;
+            if (!children.isEmpty()) return children;
 
-            for(int index = 0; index < value.length(); index++) {
+            for (int index = 0; index < value.length(); index++) {
 
                 int atIndex = value.charAt(index) - '0';
 
                 StringBuilder sb = new StringBuilder(value);
 
-                sb.setCharAt(index, (char)(((atIndex + 1) % 10) + '0'));
+                sb.setCharAt(index, (char) (((atIndex + 1) % 10) + '0'));
                 children.add(new Lock(sb.toString(), turns + 1));
 
                 sb = new StringBuilder(value);
-                sb.setCharAt(index, (char)(((atIndex - 1 + 10) % 10) + '0'));
+                sb.setCharAt(index, (char) (((atIndex - 1 + 10) % 10) + '0'));
                 children.add(new Lock(sb.toString(), turns + 1));
             }
 
@@ -57,26 +65,86 @@ public class OpenLockBFS {
         Set<String> visitedSet = new HashSet<>(Arrays.asList(deadEnds));
         Queue<Lock> queue = new ArrayDeque<>();
 
-        if(visitedSet.contains("0000")) return -1;
+        if (visitedSet.contains("0000")) return -1;
 
         queue.add(new Lock("0000", 0));
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
 
             Lock lock = queue.poll();
 
-            if(lock.value.equals(target)) return lock.turns;
+            if (lock.value.equals(target)) return lock.turns;
 
-            if(!visitedSet.contains(lock.value)) {
+            if (!visitedSet.contains(lock.value)) {
 
                 visitedSet.add(lock.value);
 
-                for(Lock child : lock.childrens()) {
+                for (Lock child : lock.childrens()) {
                     queue.offer(child);
                 }
             }
         }
 
         return -1;
+    }
+}
+
+class OpenLockBFSString {
+    public int openLock(String[] deadEnds, String target) {
+
+        Set<String> dead = new HashSet<>(Arrays.asList(deadEnds));
+        Set<String> visited = new HashSet<>();
+        Queue<String> queue = new ArrayDeque<>();
+
+        if (dead.contains("0000")) return -1;
+
+        queue.offer("0000");
+        visited.add("0000");
+
+        int turns = 0;
+
+        while (!queue.isEmpty()) {
+
+            int size = queue.size();
+
+            for (int i = 0; i < size; i++) {
+
+                String curr = queue.poll();
+
+                if (curr.equals(target)) return turns;
+
+                for (String next : getNeighbors(curr)) {
+
+                    if (!dead.contains(next) && !visited.contains(next)) {
+                        queue.offer(next);
+                        visited.add(next); //Optimization. to avoid repeated entries in the queue
+                    }
+                }
+            }
+
+            turns++;
+        }
+        return -1;
+    }
+
+    private List<String> getNeighbors(String curr) {
+
+        List<String> neighbors = new ArrayList<>();
+
+        for (int i = 0; i < 4; i++) {
+
+            char[] chars = curr.toCharArray();
+
+            // move wheel forward
+            chars[i] = (char) ((chars[i] - '0' + 1) % 10 + '0');
+            neighbors.add(new String(chars));
+
+            // move wheel backward
+            chars = curr.toCharArray();
+            chars[i] = (char) ((chars[i] - '0' - 1 + 10) % 10 + '0');
+            neighbors.add(new String(chars));
+        }
+
+        return neighbors;
     }
 }

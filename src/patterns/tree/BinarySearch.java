@@ -1,4 +1,4 @@
-package patterns.tree;//Note: Works only with Sorted Array
+//Note: Works only with Sorted Array
 //Spit array in half. Check element is greater than last element of 1st half.
 //follow same steps recursively
 
@@ -8,6 +8,7 @@ package patterns.tree;//Note: Works only with Sorted Array
 // worst - O(log n)
 //package search;
 
+package patterns.tree;
 import java.util.Arrays;
 
 public class BinarySearch {

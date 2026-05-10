@@ -1,8 +1,10 @@
-package mock_practice;//Given a string consisting only of '(' and ')', return the minimum number of insertions needed to make the string valid such that:
+package patterns.stack;
+//Given a string consisting only of '(' and ')', return the minimum number of insertions needed to make the string valid such that:
 //
 //Each '(' must be matched with exactly two consecutive ')'
 //The pattern must be: "())"
 
+//)
 public class BalanceBrackets {
 
     public int minInsertions(String s) {

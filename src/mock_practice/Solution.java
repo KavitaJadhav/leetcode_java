@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/number-of-matching-subsequences/description/
 package mock_practice;
 //Time = O(n + total characters in words)
 //Space = O(total characters)

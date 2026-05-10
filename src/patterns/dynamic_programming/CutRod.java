@@ -1,3 +1,7 @@
+//https://leetcode.com/discuss/post/4889192/rod-cutting-problem-4-solutions-top-down-mk6e/
+
+//Todo: solve
+//https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/
 //This is the classic Rod Cutting (Unbounded Knapsack) problem.
 //You have:
 //A rod of length n
@@ -13,7 +17,7 @@
 //Inner loop → up to n
 //Space: O(n)
 //DP array
-package mock_practice;
+package patterns.dynamic_programming;
 
 
 class CutRod {

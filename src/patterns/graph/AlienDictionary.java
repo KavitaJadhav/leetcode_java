@@ -1,6 +1,10 @@
+//https://www.geeksforgeeks.org/problems/alien-dictionary/1
+
 //Time Complexity
 //Graph build: O(N × L)
 //DFS: O(C + E)
+//C- characters
+//E- edges
 //Worst-case DFS edges E = O(C²)
 
 //Total Time Complexity:

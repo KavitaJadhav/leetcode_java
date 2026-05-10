@@ -11,6 +11,10 @@
 //Keys: 26-length string (constant)
 //Values: all strings → O(N * K)
 //Character count array: O(26) = O(1) per string
+//| Complexity | Value        |
+//| ---------- | ------------ |
+//| Time       | `O(N × K)` ✅ |
+//| Space      | `O(N × K)` ✅ |
 
 package patterns.hash_map;
 

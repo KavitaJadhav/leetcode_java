@@ -1,4 +1,5 @@
-package patterns.binary_search;
+//https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+// package patterns.binary_search;
 //Working solution
 //Find out whats wrong with my solution
 
@@ -8,6 +9,12 @@ package patterns.binary_search;
 //Space	    O(1)
 //Approach	Binary search on smaller array
 //Works for	Arrays of different lengths, odd/even total, empty partitions
+
+// Mean - The sum of all values divided by the number of values.
+// Median -The middle value when numbers are sorted. Even size array- middle of 2 mid values
+// Mode - The value that appears most frequently.
+
+//  Solution considering nums1 will be smaller in length. if not, swap input.
 
 class SortedArraysMedian {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {

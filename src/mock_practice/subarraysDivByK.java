@@ -1,5 +1,6 @@
 //Given an array nums and integer k,
 //count the number of subarrays whose sum is divisible by k
+//https://leetcode.com/problems/subarray-sums-divisible-by-k/
 
 package mock_practice;
 
