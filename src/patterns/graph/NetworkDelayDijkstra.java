@@ -44,15 +44,13 @@ public class NetworkDelayDijkstra {
 
         while (!priorityQueue.isEmpty()) {
             Edge current = priorityQueue.poll();
-            int current_distance = current.distance;
-
             if (visited.contains(current.node)) continue;
 
             visited.add(current.node);
 
             for (Edge edge : adjacencyMap.get(current.node)) {
                 int new_distance;
-                new_distance = edge.distance + current_distance;
+                new_distance = edge.distance + current.distance;
                 if (new_distance < distancemap.get(edge.node)) {
                     distancemap.put(edge.node, new_distance);
                     priorityQueue.offer(new Edge(edge.node, new_distance));

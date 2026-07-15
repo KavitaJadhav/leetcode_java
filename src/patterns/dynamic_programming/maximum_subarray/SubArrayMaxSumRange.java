@@ -1,3 +1,6 @@
+//https://leetcode.com/problems/maximum-subarray
+// extention - return indexes
+
 //| Metric | Complexity            |
 //| ------ | --------------------- |
 //| Time   | O(n)                  |

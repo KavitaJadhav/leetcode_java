@@ -1,4 +1,4 @@
-//https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+package patterns.binary_search;//https://leetcode.com/problems/median-of-two-sorted-arrays/description/
 // package patterns.binary_search;
 //Working solution
 //Find out whats wrong with my solution

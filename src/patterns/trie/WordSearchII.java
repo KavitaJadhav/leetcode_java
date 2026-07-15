@@ -45,11 +45,20 @@ public class WordSearchII {
         public Trie() {
         }
 
-        public Trie addChild(char value) {
-            if (!children.containsKey(value)) {
-                children.put(value, new Trie());
+        private void addWord(String word) {
+//            Todo: remove current usage
+            Trie current = this;
+
+            for (int index = 0; index < word.length(); index++) {
+
+                char value = word.charAt(index);
+                if (!current.children.containsKey(value)) {
+                    current.children.put(value, new Trie());
+                }
+                current = current.children.get(value);
             }
-            return children.get(value);
+
+            current.word = word;
         }
     }
 
@@ -65,11 +74,9 @@ public class WordSearchII {
 
         public List<String> find_words(String[] words) {
 
-
             for (String word : words) {
-                insertInTrie(word);
+                root.addWord(word);
             }
-
 
             int rows = board.length;
             int columns = board[0].length;
@@ -111,15 +118,6 @@ public class WordSearchII {
                 trie.children.remove(cellValue);
             }
         }
-
-        private void insertInTrie(String word) {
-            Trie current = root;
-            for (int index = 0; index < word.length(); index++)
-                current = current.addChild(word.charAt(index));
-            current.word = word;
-
-        }
-
     }
 
 

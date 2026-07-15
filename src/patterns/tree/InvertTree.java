@@ -37,6 +37,17 @@ class InvertTree {
         return node;
     }
 }
+
+//class InvertTree {
+//    public TreeNode invertTree(TreeNode node) {
+//        if(node==null) return null;
+//
+//        node.right = invertTree(node.left); //This will not work as the reference of right will be updated before its used in the next line
+//        node.left = invertTree(node.right);
+//        return node;
+//    }
+//}
+
 //
 // iterative
 // Space O(1) - recursion patterns.stack avoided, but queue intruduced

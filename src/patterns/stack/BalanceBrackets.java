@@ -5,6 +5,7 @@ package patterns.stack;
 //The pattern must be: "())"
 
 //)
+//))
 public class BalanceBrackets {
 
     public int minInsertions(String s) {

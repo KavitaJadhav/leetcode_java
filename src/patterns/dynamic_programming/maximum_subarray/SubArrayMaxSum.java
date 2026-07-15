@@ -1,5 +1,5 @@
 //Kadane’s Algorithm
-//https://leetcode.com/problems/maximum-subarray/submissions/1915191020/
+//https://leetcode.com/problems/maximum-subarray
 //https://www.youtube.com/watch?v=bJbfO4boNk4
 //| Metric | Complexity |
 //| ------ | ---------- |

@@ -26,10 +26,10 @@ public class SingleNumberIII {
             xOr ^= nums[index];
         }
 
-        int commonBit = xOr & -xOr;
+        int leastSetBit = xOr & -xOr;
 
         for(int num:nums){
-            if((num & commonBit)==0) res[0]^=num;
+            if((num & leastSetBit)==0) res[0]^=num;
             else res[1]^=num;
         }
 

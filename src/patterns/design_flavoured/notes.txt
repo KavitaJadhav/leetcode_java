@@ -1,0 +1,19 @@
+| #        | LeetCode Problem                           | Pattern                      |
+| -------- | ------------------------------------------ | ---------------------------- |
+| **146**  | LRU Cache                                  | HashMap + Doubly Linked List |
+| **460**  | LFU Cache                                  | HashMap + Frequency Map      |
+| **981**  | Time Based Key-Value Store                 | HashMap + Binary Search      |
+| **355**  | Design Twitter                             | Graph + Heap + Feed Design   |
+| **208**  | Implement Trie (Prefix Tree)               | Trie                         |
+| **211**  | Design Add and Search Words Data Structure | Trie + DFS                   |
+| **642**  | Design Search Autocomplete System          | Trie + Heap                  |
+| **588**  | Design In-Memory File System               | Tree + HashMap               |
+| **362**  | Design Hit Counter                         | Queue / Circular Buffer      |
+| **1396** | Design Underground System                  | HashMap + Aggregation        |
+| **1603** | Design Parking System                      | Object Modeling              |
+| **705**  | Design HashSet                             | Hash Table                   |
+| **706**  | Design HashMap                             | Hash Table                   |
+| **341**  | Flatten Nested List Iterator               | Iterator Design              |
+| **251**  | Flatten 2D Vector                          | Iterator Design              |
+| **284**  | Peeking Iterator                           | Iterator Wrapper             |
+

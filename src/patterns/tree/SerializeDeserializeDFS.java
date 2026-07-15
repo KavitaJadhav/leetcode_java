@@ -21,7 +21,7 @@ package patterns.tree;
  * }
  */
 import java.util.*;
-public class SerializeDeserialize {
+public class SerializeDeserializeDFS {
     private int index = 0;
     private void dfs_serialize(TreeNode node, List<String> result){
         if(node==null) {

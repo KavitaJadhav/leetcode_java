@@ -11,9 +11,8 @@ package patterns.binary_search;
 import java.util.*;
 class ArraySplitSumLarge {
     public int splitArray(int[] nums, int k) {
-        int total = Arrays.stream(nums).sum();
         int min = Arrays.stream(nums).max().getAsInt();
-        int max = total;
+        int max = Arrays.stream(nums).sum();
 
         while (min < max) {
             int mid = min + ((max - min) / 2);

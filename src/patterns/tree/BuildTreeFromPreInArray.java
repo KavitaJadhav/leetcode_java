@@ -7,7 +7,7 @@
 //
  package patterns.tree;
 
-public class TreePrePostTravel {
+public class BuildTreeFromPreInArray {
     /**
      * Definition for a binary patterns.tree node.
      * public class TreeNode {
