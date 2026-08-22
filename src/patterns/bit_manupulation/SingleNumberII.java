@@ -24,6 +24,8 @@
 
 package patterns.bit_manupulation;
 
+import java.util.List;
+
 public class SingleNumberII {
 
     public int singleNumber(int[] nums) {
@@ -36,5 +38,22 @@ public class SingleNumberII {
         }
 
         return one;
+    }
+    public int singleNumber(final List<Integer> numbers) {
+        int result = 0;
+        for(int index= 31 ; index>=0; index--){
+
+            int[] count = new int[2];
+            for(Integer number: numbers){
+                int bit = number>>index & 1;
+                count[bit]++;
+            }
+            if(count[0]%3==1)
+                result |= (0 << index);
+            else
+                result |= (1 << index);
+        }
+
+        return result;
     }
 }

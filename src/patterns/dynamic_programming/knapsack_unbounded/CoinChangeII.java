@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/coin-change-ii/
-
+//https://www.scaler.com/academy/mentee-dashboard/class/514056/assignment/problems/319/?navref=cl_pb_nv_tb
 
 //Loop order matters.
 //Correct:
@@ -36,7 +36,7 @@
 //Result:
 //dp[5] = 4
 
- package patterns.dynamic_programming;
+ package patterns.dynamic_programming.knapsack_unbounded;
 
 
 public class CoinChangeII {
@@ -52,3 +52,36 @@ public class CoinChangeII {
         return result[amount];
     }
 }
+// Unbounded Knapsack / Combination DP pattern.
+//public class Solution {
+//public int coinchange2(ArrayList<Integer> coins, int target) {
+//    if(coins.isEmpty()||target==0)
+//        return 1;
+//    int[] dp = new int[target+1];
+//    int mod = 1000007;
+//    dp[0] = 1;
+//
+//    for(int coinIndex = 0; coinIndex< coins.size(); coinIndex++){
+//        int coinValue = coins.get(coinIndex);
+//        for(int dpIndex = coinValue; dpIndex <=target; dpIndex++){
+//            dp[dpIndex] = dp[dpIndex]+ dp[dpIndex-coinValue];
+//            dp[dpIndex]%=mod;
+//        }
+//    }
+//    return dp[target];
+//}
+//}
+
+// unbounded knapsack
+//  A = [1, 2, 3]
+//  B = 4
+// 1,1,1,1
+// 1,1,2
+// 2,2
+// 3,1
+
+// dp - target- 4
+// 0,1,2,3,4
+// 1,1,1,1,1
+// 1,1,2,2,3
+// 1,1,2,3,4

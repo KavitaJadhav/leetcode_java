@@ -4,7 +4,7 @@
 //| DP (your solution) | O(n²)      | O(n)  |
 //| Binary search LIS  | O(n log n) | O(n)  |
 
-        package patterns.dynamic_programming;
+        package patterns.dynamic_programming.subsequenses;
 
 class LongestIncreasingSubsequenceOptimized {
     public int lengthOfLIS(int[] nums) {

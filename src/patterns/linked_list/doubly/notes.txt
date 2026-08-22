@@ -1,0 +1,12 @@
+| #  | LeetCode | Problem                                 | Pattern                        | Priority |
+| -- | -------- | --------------------------------------- | ------------------------------ | -------- |
+| 1  | 146      | **LRU Cache**                           | HashMap + Doubly Linked List   | ⭐⭐⭐⭐⭐    |
+| 2  | 707      | Design Linked List                      | DLL implementation             | ⭐⭐⭐⭐     |
+| 3  | 430      | Flatten a Multilevel Doubly Linked List | DFS + DLL pointers             | ⭐⭐⭐⭐⭐    |
+| 4  | 1472     | Design Browser History                  | DLL / Stack idea               | ⭐⭐⭐⭐     |
+| 5  | 432      | All O`one Data Structure                | HashMap + DLL buckets          | ⭐⭐⭐⭐⭐    |
+| 6  | 641      | Design Circular Deque                   | Doubly linked list             | ⭐⭐⭐⭐     |
+| 7  | 1670     | Design Front Middle Back Queue          | DLL + middle pointer           | ⭐⭐⭐⭐     |
+| 8  | 460      | LFU Cache                               | HashMap + DLL + frequency list | ⭐⭐⭐⭐⭐    |
+| 9  | 2046     | Sort Linked List Already Sorted?        | DLL manipulation concepts      | ⭐⭐       |
+| 10 | 430      | Flatten Multilevel DLL                  | Recursion + pointer rewiring   | ⭐⭐⭐⭐⭐    |

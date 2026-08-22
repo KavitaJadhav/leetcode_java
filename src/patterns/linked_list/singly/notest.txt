@@ -1,0 +1,32 @@
+| #  | LeetCode | Problem                                 | Pattern                  | Priority |
+| -- | -------- | --------------------------------------- | ------------------------ | -------- |
+| 1  | 206      | Reverse Linked List                     | Pointer manipulation     | ⭐⭐⭐⭐⭐    |
+| 2  | 21       | Merge Two Sorted Lists                  | Dummy node + merge       | ⭐⭐⭐⭐⭐    |
+| 3  | 141      | Linked List Cycle                       | Fast/Slow pointer        | ⭐⭐⭐⭐⭐    |
+| 4  | 142      | Linked List Cycle II                    | Cycle detection + math   | ⭐⭐⭐⭐⭐    |
+| 5  | 876      | Middle of the Linked List               | Fast/Slow pointer        | ⭐⭐⭐⭐⭐    |
+| 6  | 19       | Remove Nth Node From End                | Two pointer gap          | ⭐⭐⭐⭐⭐    |
+| 7  | 160      | Intersection of Two Linked Lists        | Two pointer switching    | ⭐⭐⭐⭐     |
+| 8  | 2        | Add Two Numbers                         | Carry + traversal        | ⭐⭐⭐⭐⭐    |
+| 9  | 24       | Swap Nodes in Pairs                     | Pointer rearrangement    | ⭐⭐⭐⭐     |
+| 10 | 25       | Reverse Nodes in k-Group                | Reverse sublist          | ⭐⭐⭐⭐⭐    |
+| 11 | 92       | Reverse Linked List II                  | Partial reversal         | ⭐⭐⭐⭐     |
+| 12 | 234      | Palindrome Linked List                  | Reverse half + compare   | ⭐⭐⭐⭐⭐    |
+| 13 | 143      | Reorder List                            | Middle + reverse + merge | ⭐⭐⭐⭐⭐    |
+| 14 | 148      | Sort List                               | Merge sort               | ⭐⭐⭐⭐⭐    |
+| 15 | 23       | Merge k Sorted Lists                    | Heap + merge             | ⭐⭐⭐⭐⭐    |
+| 16 | 138      | Copy List with Random Pointer           | HashMap / node cloning   | ⭐⭐⭐⭐⭐    |
+| 17 | 61       | Rotate List                             | Circular list            | ⭐⭐⭐⭐     |
+| 18 | 86       | Partition List                          | Two dummy lists          | ⭐⭐⭐⭐     |
+| 19 | 82       | Remove Duplicates from Sorted List II   | Dummy node               | ⭐⭐⭐      |
+| 20 | 83       | Remove Duplicates from Sorted List      | Traversal                | ⭐⭐⭐      |
+| 21 | 237      | Delete Node in a Linked List            | Pointer trick            | ⭐⭐⭐      |
+| 22 | 707      | Design Linked List                      | Implementation           | ⭐⭐⭐      |
+| 23 | 328      | Odd Even Linked List                    | Pointer grouping         | ⭐⭐⭐⭐     |
+| 24 | 445      | Add Two Numbers II                      | Stack + reverse          | ⭐⭐⭐⭐     |
+| 25 | 430      | Flatten a Multilevel Doubly Linked List | DFS pointer manipulation | ⭐⭐⭐      |
+| 26 | 147      | Insertion Sort List                     | Sorting + pointers       | ⭐⭐⭐      |
+| 27 | 817      | Linked List Components                  | HashSet traversal        | ⭐⭐⭐      |
+| 28 | 1019     | Next Greater Node in Linked List        | Stack                    | ⭐⭐⭐⭐     |
+| 29 | 1171     | Remove Zero Sum Consecutive Nodes       | Prefix sum + map         | ⭐⭐⭐⭐     |
+| 30 | 1669     | Merge In Between Linked Lists           | Pointer manipulation     | ⭐⭐⭐      |

@@ -5,7 +5,7 @@
 //| Space  | O(n)  |
 
 
-        package patterns.dynamic_programming;
+        package patterns.dynamic_programming.subsequenses;
 
 import java.util.*;
 
