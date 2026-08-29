@@ -1,4 +1,5 @@
-package patterns.bit_manupulation;
+//https://www.scaler.com/academy/mentee-dashboard/class/514022/assignment/problems/9412?navref=cl_tt_nv
+// package patterns.bit_manupulation;
 
 public class BoomerFood {
     // thoughtprocess-

@@ -1,12 +1,8 @@
-//https://leetcode.com/problems/missing-number
+//https://www.scaler.com/academy/mentee-dashboard/class/514022/assignment/problems/19558/submissions
+//Maximum AND: Greedily build the answer from the highest bit to the lowest, keeping a bit only if at least two numbers contain all bits currently selected.
 
-//Complexity
-//Time: O(n) (two passes)
+//Time: O(32 × N) → O(N)
 //Space: O(1)
-
-//Interview Summary (1–2 lines):
-//XOR all numbers from 0 to n with all array elements; duplicates cancel, leaving the missing number.
-
 package patterns.bit_manupulation;
 
 class MissingNumber {

@@ -1,9 +1,17 @@
-//https://www.scaler.com/academy/mentee-dashboard/class/514024/assignment/problems/269?navref=cl_tt_nv
 package patterns.maths.other;
 
-public class GCD {
+public class DeviserGame {
+    public int solve(int A, int B, int C) {
+        if(A<=0)
+            return 0;
+        return A/ lcm(B, C);
 
-    public int gcd(int num1, int num2) {
+    }
+
+    private int lcm(int num1, int num2){
+        return (num1*num2)/gcd(num1, num2);
+    }
+    private int gcd(int num1, int num2){
         if(num1 < num2)
             return gcd(num2, num1);
 //        Assuming 1st no will be greater;
@@ -17,3 +25,4 @@ public class GCD {
         return gcd(num2, num1%num2);
     }
 }
+
