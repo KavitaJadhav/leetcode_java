@@ -1,5 +1,9 @@
+
 //https://www.scaler.com/academy/mentee-dashboard/class/514057/assignment/problems/9359/submissions
 package patterns.graph.bfs;
+//Given a directed graph having A nodes labelled from 1 to A containing M edges given by matrix B of size M x 2such that there is a edge directed from node
+//B[i][0] to node B[i][1].
+//Find whether a path exists from node 1 to node A.
 
 import java.util.*;
 public class PathExists {
@@ -15,14 +19,12 @@ public class PathExists {
             int edgeTo = pair.get(1);
             adjecencyList.get(edgeFrom).add(edgeTo);
         }
-        // Set<Integer> visisting = new HashSet<>();
-
 
         Queue<Integer> queue = new LinkedList<>();
 
 
-        Set<Integer> visied = new HashSet<>();
-        visied.add(1);
+        Set<Integer> visited = new HashSet<>();
+        visited.add(1);
         for(Integer edge : adjecencyList.get(1)){
             queue.offer(edge);
         }
@@ -33,7 +35,7 @@ public class PathExists {
                 return 1;
 
             for(Integer edge : adjecencyList.get(next)){
-                if(!visied.contains(edge))
+                if(!visited.contains(edge))
                     queue.offer(edge);
             }
         }

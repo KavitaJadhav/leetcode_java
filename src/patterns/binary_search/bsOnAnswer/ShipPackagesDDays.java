@@ -9,7 +9,7 @@
 //N = number of packages
 //S = sum(weights)
 //Note: s-> sum(weights), as search will be tracked down from sum count.
-package patterns.binary_search;
+package patterns.binary_search.bsOnAnswer;
 import java.util.*;
 class ShipPackagesDDays {
     public int shipWithinDays(int[] weights, int days) {
@@ -40,13 +40,23 @@ class ShipPackagesDDays {
 
                 minCapacity = midCapacity +1;
             }else{
-                System.out.println(daysToShip);
-                System.out.println(minCapacity);
-                System.out.println(maxCapacity);
-
+//                System.out.println(daysToShip);
+//                System.out.println(minCapacity);
+//                System.out.println(maxCapacity);
                 maxCapacity= midCapacity;
             }
         }
         return minCapacity;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new ShipPackagesDDays().shipWithinDays(new int[] {3,5,8,5}, 5));
+        System.out.println(new ShipPackagesDDays().shipWithinDays(new int[] {3,5,8,5,5}, 5));
+        System.out.println(new ShipPackagesDDays().shipWithinDays(new int[] {3,5,8,5,5,5}, 5));
+        System.out.println(new ShipPackagesDDays().shipWithinDays(new int[] {3,5,8,5,5,5,5}, 5));
+//        8
+//        8
+//        8
+//        10
     }
 }

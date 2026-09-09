@@ -3,7 +3,7 @@
 
 import java.util.*;
 
-public class SouroundedRegions {
+public class SurroundingRegions {
     class Cell {
         public int row;
         public int column;

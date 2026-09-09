@@ -15,9 +15,9 @@
 //That patterns.stack space counts.
 
 // Note: Interview preference 0(1) space complexity - iterative
-package patterns.binary_search;
+package patterns.binary_search.rotated_array;
 
-class RotatedSortedArray {
+class RotatedSortedArrayRecursive {
     private int binarySearch(int[] nums, int target, int startIndex, int endIndex) {
         if (startIndex > endIndex) return -1;
         int midIndex = (startIndex + endIndex) / 2;
@@ -27,7 +27,6 @@ class RotatedSortedArray {
         if (nums[midIndex] == target) {
             return midIndex;
         }
-
 
         if (nums[startIndex] <= nums[midIndex]) {
             if (target < nums[midIndex] && target >= nums[startIndex]) {
@@ -52,7 +51,7 @@ class RotatedSortedArray {
     }
 
     public static void main(String[] args) {
-        RotatedSortedArray rotatedSortedArray = new RotatedSortedArray();
+        RotatedSortedArrayRecursive rotatedSortedArray = new RotatedSortedArrayRecursive();
         System.out.println("Search: " + rotatedSortedArray.search(new int[]{}, 2));
         System.out.println("Search: " + rotatedSortedArray.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 0));
         System.out.println("Search: " + rotatedSortedArray.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 3));

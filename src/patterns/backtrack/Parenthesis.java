@@ -19,25 +19,29 @@ public class Parenthesis {
             return;
         }
 
+        System.out.println(openParenthesis+ " "+closingParenthesis+" "+ sb.toString());
 
-        if (closingParenthesis > openParenthesis) {
-            sb.append(')');
+        if(closingParenthesis<openParenthesis || openParenthesis==0)
+                return;
+//
+//        if (closingParenthesis >= openParenthesis) {
+            sb.append('(');
             openParenthesis--;
             backtrack(A, openParenthesis, closingParenthesis, sb);
             sb.delete(sb.length() - 1, 1);
             openParenthesis++;
 
-            sb.append('(');
+            sb.append(')');
             closingParenthesis--;
             backtrack(A, openParenthesis, closingParenthesis, sb);
             sb.delete(sb.length() - 1, 1);
             closingParenthesis++;
-        }
+//        }
     }
 
     public static void main(String[] args) {
 
         Parenthesis parenthesis = new Parenthesis();
-        System.out.println(parenthesis.generateParenthesis(2));
+        System.out.println(parenthesis.generateParenthesis(3));
     }
 }

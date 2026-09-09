@@ -64,4 +64,8 @@ public class NQueens {
         backtrack(0, board, visitedColumns, positiveD, negativeD, result);
         return result;
     }
+
+    public static void main(String[] args) {
+        System.out.println(new NQueens().solveNQueens(4));
+    }
 }

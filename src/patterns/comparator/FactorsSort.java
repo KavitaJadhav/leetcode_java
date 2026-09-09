@@ -2,6 +2,7 @@
 package patterns.comparator;
 
 import java.util.*;
+//element having the least number of factors should be the first to be displayed and the number having highest number of factors should be the last one. If 2 elements have same number of factors, then number with less value should come first.
 
 public class FactorsSort {
 

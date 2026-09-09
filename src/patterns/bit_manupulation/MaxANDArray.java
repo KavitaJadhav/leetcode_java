@@ -19,6 +19,8 @@
 
 package patterns.bit_manupulation;
 
+import java.util.*;
+
 public class MaxANDArray {
     public int solve(ArrayList<Integer> values) {
 
@@ -41,4 +43,25 @@ public class MaxANDArray {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int size = scanner.nextInt();
+        ArrayList<Integer> input = new ArrayList<>();
+//        int[] input = new int[size];
+        for(int index = 0; index< size; index++){
+            input.add(scanner.nextInt());
+        }
+
+        MaxANDArray maxANDArray = new MaxANDArray();
+        System.out.println(maxANDArray.solve(input));
+    }
 }
+//[1,2,3,4,5]
+//
+//0010
+//0110
+//0111
+//
+//0110

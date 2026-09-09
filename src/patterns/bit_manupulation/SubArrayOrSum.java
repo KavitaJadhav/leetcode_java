@@ -1,6 +1,8 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514022/homework/problems/6604/submissions
 package patterns.bit_manupulation;
-
+//You are given an array of integers A of size N.
+//The value of a subarray is defined as BITWISE OR of all elements in it.
+//Return the sum of value of all subarrays of A % (109 + 7).
 import java.util.ArrayList;
 
 public class SubArrayOrSum {
@@ -40,3 +42,6 @@ public class SubArrayOrSum {
         return result;
     }
 }
+
+//[1, 2, 3, 4]
+//40

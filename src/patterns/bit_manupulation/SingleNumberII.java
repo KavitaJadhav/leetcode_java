@@ -22,6 +22,8 @@
 //two → bits seen twice
 //third occurrence → clear both
 
+//one number twice
+//other number thrice
 package patterns.bit_manupulation;
 
 import java.util.List;

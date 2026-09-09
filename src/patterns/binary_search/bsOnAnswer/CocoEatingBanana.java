@@ -7,7 +7,7 @@
 //Where:
 //n = number of piles
 //m = max pile size
-package patterns.binary_search;
+package patterns.binary_search.bsOnAnswer;
 
 import java.util.Arrays;
 
@@ -32,5 +32,9 @@ class CocoEatingBanana {
             }
         }
         return lowerLimit;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new CocoEatingBanana().minEatingSpeed(new int[] {3,5,8,5}, 5));
     }
 }

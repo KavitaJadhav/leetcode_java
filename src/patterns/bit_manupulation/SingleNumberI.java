@@ -5,7 +5,7 @@
 //Complexity
 //Time:O(n)
 //Space:O(1)
-
+//one number once other number twice
 package patterns.bit_manupulation;
 
 public class SingleNumberI {

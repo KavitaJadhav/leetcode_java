@@ -16,23 +16,29 @@
 //Find a bit where the two unique numbers differ
 //Split numbers into two groups using that bit
 
+//exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.
+
+
 package patterns.bit_manupulation;
 
 public class SingleNumberIII {
     public int[] singleNumber(int[] nums) {
-        int xOr=nums[0];
-        int[] res = new int[2] ;
-        for(int index = 1; index < nums.length; index++){
+        int xOr = nums[0];
+        int[] res = new int[2];
+        for (int index = 1; index < nums.length; index++) {
             xOr ^= nums[index];
         }
 
         int leastSetBit = xOr & -xOr;
 
-        for(int num:nums){
-            if((num & leastSetBit)==0) res[0]^=num;
-            else res[1]^=num;
+        for (int num : nums) {
+            if ((num & leastSetBit) == 0) res[0] ^= num;
+            else res[1] ^= num;
         }
 
         return res;
     }
 }
+
+//num & -num - gives rightmost set bit
+//-num = flip all bits + 1

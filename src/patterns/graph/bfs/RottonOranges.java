@@ -1,5 +1,8 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514060/assignment/problems/4704/submissions
 // Todo: AI probing is pending
+//The value 0 representing an empty cell.
+//The value 1 representing a fresh orange.
+//The value 2 representing a rotten orange.
 
 package patterns.graph.bfs;
 

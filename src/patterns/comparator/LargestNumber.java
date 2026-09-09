@@ -1,7 +1,7 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514033/assignment/problems/64/?navref=cl_pb_nv_tb
 
 package patterns.comparator;
-
+//Given an array A of non-negative integers, arrange them such that they form the largest number.
 import java.util.*;
 
 public class LargestNumber {

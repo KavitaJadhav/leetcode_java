@@ -71,4 +71,12 @@ class SortedArraysMedian {
 
         throw new IllegalArgumentException("Input arrays are not sorted");
     }
+
+    public static void main(String[] args) {
+        System.out.println(new SortedArraysMedian().findMedianSortedArrays(new int[] {5,6,7,8,9}, new int[] {1,2,3,4,5,6,7}));
+//        5
+        System.out.println(new SortedArraysMedian().findMedianSortedArrays(new int[] {5,6,7,8,9,10,11,12,13},
+                new int[] {9,10,16,18,20,30,40,15,60,70, 75,80}));
+//
+    }
 }

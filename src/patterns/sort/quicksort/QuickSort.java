@@ -1,6 +1,7 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514033/assignment/problems/66911/submissions
 package patterns.sort.quicksort;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class QuickSort {
@@ -47,5 +48,12 @@ public class QuickSort {
         int temp = values.get(index1);
         values.set(index1, values.get(index2));
         values.set(index2, temp);
+    }
+
+    public static void main(String[] args) {
+        QuickSort quickSort = new QuickSort();
+        System.out.println(
+                quickSort.solve(new ArrayList<>(Arrays.asList(1, 4, 2, 1)))
+        );
     }
 }

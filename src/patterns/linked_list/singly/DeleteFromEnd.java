@@ -10,16 +10,17 @@
 package patterns.linked_list.singly;
 
 public class DeleteFromEnd {
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     * int val;
-     * ListNode next;
-     * ListNode() {}
-     * ListNode(int val) { this.val = val; }
-     * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     * }
-     */
+
+    class ListNode {
+        public int val;
+        public InsertNode.ListNode next;
+
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -39,16 +40,17 @@ public class DeleteFromEnd {
 }
 
 public class DeleteFromEndOld {
-    /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     * int val;
-     * ListNode next;
-     * ListNode() {}
-     * ListNode(int val) { this.val = val; }
-     * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     * }
-     */
+
+    class ListNode {
+        public int val;
+        public InsertNode.ListNode next;
+
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
+
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode iterator = head;
         ListNode delay = head;

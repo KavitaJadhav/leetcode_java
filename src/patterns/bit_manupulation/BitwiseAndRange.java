@@ -17,7 +17,7 @@
 
 package patterns.bit_manupulation;
 
-public class bitwiseAndRange {
+public class BitwiseAndRange {
     public int rangeBitwiseAnd(int left, int right) {
         int shifts = 0;
 
@@ -28,6 +28,12 @@ public class bitwiseAndRange {
         }
 
         return left<<shifts;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new BitwiseAndRange().rangeBitwiseAnd(2,5));
+        System.out.println(new BitwiseAndRange().rangeBitwiseAnd(5,6));
+        System.out.println(new BitwiseAndRange().rangeBitwiseAnd(5,7));
     }
 }
 
@@ -45,7 +51,8 @@ public class bitwiseAndRange {
 
 //Basic idea
 // AND of all numbers from left to right
-//O(n) not accepted;
+//O(n)*32  = 0(n) not accepted;
+//Note: written for understanding.. share as a brute force solution
 
 class bitwiseAndRangeSolution {
     public int rangeBitwiseAnd(int left, int right) {

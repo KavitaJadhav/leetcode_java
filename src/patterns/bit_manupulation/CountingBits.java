@@ -1,4 +1,5 @@
 //https://leetcode.com/problems/counting-bits/description/
+//Question - return array indicating count of set bits upto N;
 // Approach
 //Create an array result of length n + 1.
 //For each number 0..n, compute the number of set bits using Brian Kernighan’s trick:
@@ -8,6 +9,8 @@
 //Space: O(n) for the result array
 
 package patterns.bit_manupulation;
+
+import java.util.Arrays;
 
 public class CountingBits {
 
@@ -27,5 +30,9 @@ public class CountingBits {
             result++;
         }
         return result;
+    }
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString( new CountingBits().countBits(10)));
+//
     }
 }

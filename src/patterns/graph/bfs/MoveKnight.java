@@ -1,4 +1,5 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514060/homework/problems/292/?navref=cl_pb_nv_tb
+// minimum number of steps for the knight to move from source to destination
 //Knight minimum-moves problem, BFS is preferred over Dijkstra.
 //The reason is the edge cost.
 
@@ -35,7 +36,7 @@ public class MoveKnight {
     public int knight(int rows, int columns,
                       int sourceRow, int sourceColumn,
                       int targetRow, int targetColumn) {
-
+//input is one indexed
         sourceRow--;
         sourceColumn--;
         targetRow--;

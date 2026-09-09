@@ -10,7 +10,7 @@
 //Instead of: midIndex = (leftIndex + rightIndex) / 2;
 //Safer: midIndex = leftIndex + (rightIndex - leftIndex) / 2;
 
-package patterns.binary_search;
+package patterns.binary_search.rotated_array;
 
 class RotatedArrayMinimum {
     public int findMin(int[] nums) {

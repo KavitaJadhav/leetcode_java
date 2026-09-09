@@ -1,5 +1,7 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514025/homework/problems/4531?navref=cl_tt_nv
  package patterns.bit_manupulation;
+//bit = 0 → double
+//bit = 1 → double + ask Sam once
 
 public class HelpFromSam {
     public int solve(int target) {

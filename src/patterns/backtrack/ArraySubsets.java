@@ -16,7 +16,7 @@ public class ArraySubsets {
             return;
         }
 
-//dont use the element at index
+//don't use the element at index
         generate(result, combination, values, index + 1);
 
 //use the element at index
@@ -26,3 +26,4 @@ public class ArraySubsets {
         combination.remove(combination.size()-1);
     }
 }
+

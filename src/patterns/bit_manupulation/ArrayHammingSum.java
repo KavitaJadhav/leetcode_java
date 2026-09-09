@@ -36,4 +36,13 @@ public class ArrayHammingSum {
 
         return result;
     }
+
+    public static void main(String[] args) {
+//        Todo: revisit answer
+        System.out.println(new ArrayHammingSum().totalHammingDistance(new int[]{1,2,3,4}));
+//      Ans -   11
+        System.out.println(new ArrayHammingSum().totalHammingDistance(new int[]{1,2}));
+        System.out.println(new ArrayHammingSum().totalHammingDistance(new int[]{1,2,3}));
+
+    }
 }

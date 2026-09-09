@@ -1,5 +1,5 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514022/assignment/problems/9412?navref=cl_tt_nv
-// package patterns.bit_manupulation;
+ package patterns.bit_manupulation;
 
 public class BoomerFood {
     // thoughtprocess-
@@ -22,5 +22,11 @@ public class BoomerFood {
                 setBits++;
         }
         return setBits;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new BoomerFood().solve(10));
+//        2
+//        10 = 8+0+2+0=2
     }
 }
