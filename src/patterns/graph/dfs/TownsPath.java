@@ -2,7 +2,8 @@
 //Todo: implement again and submit dfs approach.. copied code for reference
 //https://www.scaler.com/academy/mentee-dashboard/class/514057/homework/problems/516/hints?navref=cl_pb_nv_tb
 package patterns.graph.dfs;
-
+//find whether you can reach the first town from the second without repeating any edge.
+//B C : query to find whether B is reachable from C.
 import java.util.*;
 
 public class TownsPath {
@@ -39,7 +40,7 @@ public class TownsPath {
                         int destination,
                         Map<Integer, ArrayList<Integer>> adjacencyList,
                         Set<Integer> visited) {
-
+//Visiting is not used because it's a tree, and it won't have a cycle/loops
         if (current == destination) {
             return true;
         }

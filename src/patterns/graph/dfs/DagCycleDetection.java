@@ -1,6 +1,7 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514057/assignment/problems/9327/?navref=cl_pb_nv_tb
 package patterns.graph.dfs;
-
+//Given an directed graph having A nodes. A matrix B of size M x 2 is given which represents the M edges such that there is a edge directed from node B[i][0] to node B[i][1].
+//Find whether the graph contains a cycle or not, return 1 if cycle is present else return 0.
 import java.util.*;
 public class DagCycleDetection {
 

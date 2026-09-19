@@ -1,5 +1,8 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514060/homework/problems/208/submissions
- package patterns.graph.bfs;
+//Given a 2-D board A of size N x M containing 'X' and 'O', capture all regions surrounded by 'X'.
+//A region is captured by flipping all 'O's into 'X's in that surrounded region.
+
+package patterns.graph.bfs;
 
 import java.util.*;
 

@@ -1,6 +1,9 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514060/assignment/problems/376/?navref=cl_pb_nv_tb
 //Todo: AI probing is pending
 package patterns.graph.mst;
+//There are A islands and there are M bridges connecting them. Each bridge has some cost attached to it.
+//We need to find bridges with minimal cost such that all islands are connected.
+//It is guaranteed that input data will contain at least one possible scenario in which all islands are connected with each other.
 
 import java.util.*;
 
@@ -18,7 +21,6 @@ public class CommutableIslands {
     }
     public int solve(int islands, ArrayList<ArrayList<Integer>> edges) {
         // Minimum spanning tree
-        int cost = 0;
         int totalCost = 0;
         Map<Integer, ArrayList<Node>> map = new HashMap<>();
         for(int number = 1; number <= islands; number++){

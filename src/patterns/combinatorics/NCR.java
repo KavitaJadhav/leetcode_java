@@ -19,4 +19,8 @@ public class NCR {
         return dp[r];
     }
 }
-
+//A = 5 -n
+//B = 2 - r
+//C = 13 -m
+//dp-0,1,2,3,4,5,6,7
+//dp-1,1,

@@ -2,6 +2,7 @@ package patterns.dynamic_programming.knapsack_0_1;
 
 import java.util.ArrayList;
 
+//todo: figure out problem statement for this
 public class MaximumCapacitySum {
     public int solve(ArrayList<Integer> values, ArrayList<Integer> weights, int capacity) {
         int rows = values.size();

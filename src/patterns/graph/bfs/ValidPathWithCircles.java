@@ -1,5 +1,7 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514072/homework/problems/418/submissions
 package patterns.graph.bfs;
+//Interview explanation
+//"This is a grid reachability problem. Since movement is allowed in 8 directions and every movement has equal cost, I model the grid as an implicit graph and use BFS. Circle-covered points are obstacles, so BFS only traverses valid points."
 
 import java.util.*;
 
@@ -89,3 +91,100 @@ public class ValidPathWithCircles {
 //5. Reach (x,y)?
 //YES → YES
 //queue empty → NO
+
+
+class ValidPathWithCirclesImproved {
+
+    class Node {
+        int row;
+        int column;
+
+        Node(int row, int column) {
+            this.row = row;
+            this.column = column;
+        }
+    }
+
+    public String solve(
+            int targetRow,
+            int targetColumn,
+            int circles,
+            int radius,
+            ArrayList<Integer> centersX,
+            ArrayList<Integer> centersY) {
+
+        boolean[][] visited = new boolean[targetRow + 1][targetColumn + 1];
+        boolean[][] blocked = new boolean[targetRow + 1][targetColumn + 1];
+
+        int radiusSquared = radius * radius;
+
+        // 1. Mark all points inside any circle as blocked
+        for (int row = 0; row <= targetRow; row++) {
+            for (int column = 0; column <= targetColumn; column++) {
+
+                for (int index = 0; index < circles; index++) {
+
+                    int deltaX = centersX.get(index) - row;
+                    int deltaY = centersY.get(index) - column;
+
+                    if (deltaX * deltaX + deltaY * deltaY <= radiusSquared) {
+                        blocked[row][column] = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // Start or destination is blocked
+        if (blocked[0][0] || blocked[targetRow][targetColumn]) {
+            return "NO";
+        }
+
+        int[][] neighbours = {
+                {0, -1},
+                {-1, -1},
+                {-1, 0},
+                {-1, 1},
+                {0, 1},
+                {1, 1},
+                {1, 0},
+                {1, -1}
+        };
+
+        Queue<Node> queue = new LinkedList<>();
+
+        queue.offer(new Node(0, 0));
+        visited[0][0] = true;
+
+        // 2. BFS
+        while (!queue.isEmpty()) {
+
+            Node node = queue.poll();
+
+            if (node.row == targetRow && node.column == targetColumn) {
+                return "YES";
+            }
+
+            for (int[] neighbour : neighbours) {
+
+                int nextRow = node.row + neighbour[0];
+                int nextColumn = node.column + neighbour[1];
+
+                if (nextRow < 0 || nextRow > targetRow ||
+                        nextColumn < 0 || nextColumn > targetColumn) {
+                    continue;
+                }
+
+                if (visited[nextRow][nextColumn] ||
+                        blocked[nextRow][nextColumn]) {
+                    continue;
+                }
+
+                visited[nextRow][nextColumn] = true;
+                queue.offer(new Node(nextRow, nextColumn));
+            }
+        }
+
+        return "NO";
+    }
+}

@@ -19,7 +19,6 @@ public class ConstructionCost {
     }
     public int solve(int centers, ArrayList<ArrayList<Integer>> edges) {
         // Minimum spanning tree
-        int cost = 0;
         int totalCost = 0;
         int mod = 1000000007;
         Map<Integer, ArrayList<Node>> map = new HashMap<>();
@@ -41,19 +40,19 @@ public class ConstructionCost {
             queue.offer(node);
         }
 
-        Set<Integer> visitedcenters = new HashSet<>();
-        visitedcenters.add(1);
+        Set<Integer> visitedCenters = new HashSet<>();
+        visitedCenters.add(1);
 
         while(!queue.isEmpty()){
             Node next = queue.poll();
 
-            if(!visitedcenters.contains(next.center)){
+            if(!visitedCenters.contains(next.center)){
                 totalCost+= next.distance;
                 totalCost%=mod;
                 for(Node node : map.get(next.center)){
                     queue.offer(node);
                 }
-                visitedcenters.add(next.center);
+                visitedCenters.add(next.center);
             }
         }
         return totalCost;

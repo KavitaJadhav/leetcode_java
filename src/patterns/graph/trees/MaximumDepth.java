@@ -21,6 +21,8 @@
 //Note: level order means think in term of bfs
 package patterns.graph.trees;
 
+import java.util.*;
+
 public class MaximumDepth {
 
 
@@ -51,10 +53,10 @@ public class MaximumDepth {
         Map<Integer, ArrayList<Integer>> levelMap = new HashMap<>();
 
         Queue<Integer> queue = new LinkedList<>();
-        Set<Integer> set = new HashSet<>();
+        Set<Integer> visited = new HashSet<>();
 
         queue.offer(1);
-        set.add(1);
+        visited.add(1);
 
         int lastLevel = 0;
 
@@ -62,23 +64,23 @@ public class MaximumDepth {
 
             int size = queue.size();
 
-            levelMap.put(lastLevel, new ArrayList<>());
+            ArrayList<Integer> list = new ArrayList<>();
 
             for (int index = 0; index < size; index++) {
 
                 int node = queue.poll();
 
-                levelMap.get(lastLevel).add(node);
+                list.add(node);
 
                 for (Integer value : edegMap.get(node)) {
 
-                    if (!set.contains(value)) {
-                        set.add(value);
+                    if (!visited.contains(value)) {
+                        visited.add(value);
                         queue.offer(value);
                     }
                 }
             }
-
+            levelMap.put(lastLevel, list);
             lastLevel++;
         }
 

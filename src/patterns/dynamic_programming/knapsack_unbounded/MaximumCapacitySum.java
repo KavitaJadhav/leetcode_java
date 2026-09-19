@@ -1,4 +1,8 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514053/assignment/problems/9340/?navref=cl_pb_nv_tb
+
+//Given a knapsack weight A and a set of items with certain value B[i] and weight C[i], we need to calculate maximum amount that could fit in this quantity.
+//This is different from classical Knapsack problem, here we are allowed to use unlimited number of instances of an item.
+
 package patterns.dynamic_programming.knapsack_unbounded;
 
 import java.util.ArrayList;

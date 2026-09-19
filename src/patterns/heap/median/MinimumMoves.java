@@ -1,4 +1,14 @@
+//https://www.scaler.com/academy/mentee-dashboard/class/514062/assignment/problems/282?navref=cl_tt_nv
+//An occupied seat is marked with a character 'x' and an unoccupied seat is marked with a dot ('.')
+//
+//Now your target is to make the whole group sit together i.e. next to each other, without having any vacant seat between them in such a way that the total number of hops or jumps to move them should be minimum.
+//
+//In one jump a person can move to the adjacent seat (if available).
+//
+//A = "....x..xx...x.."
+//ANS=5
 package patterns.heap.median;
+
 import java.util.*;
 
 public class MinimumMoves {

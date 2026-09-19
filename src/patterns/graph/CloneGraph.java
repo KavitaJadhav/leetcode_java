@@ -37,7 +37,21 @@ class Node {
 
 package patterns.graph;
 
+
+import java.util.*;
+
 public class CloneGraph {
+    class Node{
+
+        public Object val;
+        public ArrayList<Node> neighbors;
+
+        public Node(Object val) {
+
+            this.val = val;
+            this.neighbors = new ArrayList<>();
+        }
+    }
     public Node cloneGraph(Node node) {
         if(node==null) return null ;
         Map<Node, Node> clonedMap = new HashMap(){};

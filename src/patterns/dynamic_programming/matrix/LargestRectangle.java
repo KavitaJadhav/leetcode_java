@@ -1,6 +1,10 @@
 package patterns.dynamic_programming.matrix;
 
+//Given a 2D binary matrix grid filled with 0s and 1s, find the largest rectangle containing only 1s and return its area.
 import java.util.*;
+//1. Time Complexity: $O(R \times C)$
+//2. Space Complexity: $O(C)$
+
 
 public class LargestRectangle {
 
@@ -56,5 +60,22 @@ public class LargestRectangle {
         }
         // System.out.print(" "+Arrays.toString(array));
         return result;
+    }
+    public static void main(String[] args) {
+        ArrayList<ArrayList<Integer>> grid = new ArrayList<>();
+        grid.add(new ArrayList<>(Arrays.asList(1, 0, 1, 0, 0)));
+        grid.add(new ArrayList<>(Arrays.asList(1, 0, 1, 1, 1)));
+        grid.add(new ArrayList<>(Arrays.asList(1, 1, 1, 1, 1)));
+        grid.add(new ArrayList<>(Arrays.asList(1, 0, 0, 1, 0)));
+
+        System.out.println(new LargestRectangle().maximalRectangle(grid));
+
+        ArrayList<ArrayList<Integer>> grid2 = new ArrayList<>();
+        grid2.add(new ArrayList<>(Arrays.asList(1, 0, 1, 0, 0)));
+        grid2.add(new ArrayList<>(Arrays.asList(1, 1, 1,0, 1)));
+        grid2.add(new ArrayList<>(Arrays.asList(1, 1, 1, 0, 1)));
+        grid2.add(new ArrayList<>(Arrays.asList(1, 0, 0, 1, 0)));
+
+        System.out.println(new LargestRectangle().maximalRectangle(grid2));
     }
 }

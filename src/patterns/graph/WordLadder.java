@@ -1,11 +1,4 @@
 //https://leetcode.com/problems/word-ladder/
-//🔥 Show optimized Word Ladder
-//
-//🔥 Show bidirectional BFS (very important for big interviews)
-//
-//🔥 Walk through dry run step-by-step
-//
-//🔥 Give you production-ready BFS template to memorize
 
 //Complexity
 //Let N = number of words, L = word length
@@ -15,6 +8,7 @@
 package patterns.graph;
 
 import java.util.*;
+//Not preferred
 
 public class WordLadder {
     private boolean isTransformatinWord(String from, String to) {
@@ -30,7 +24,7 @@ public class WordLadder {
         if (beginWord.equals(endWord)) return 0;
 
         Set<String> wordSet = new HashSet<>(wordList);
-        Queue<String> queue = new ArrayDeque<>();
+        Queue<String> queue = new LinkedList<>();
         queue.add(beginWord);
 
         int transformations = 1;

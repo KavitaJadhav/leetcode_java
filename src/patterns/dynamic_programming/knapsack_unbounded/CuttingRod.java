@@ -2,7 +2,8 @@
 package patterns.dynamic_programming.knapsack_unbounded;
 
 import java.util.ArrayList;
-
+//give costs of rod size..
+//cut rod in small sizes to maximize total cost
 public class CuttingRod {
 
     public int solve(ArrayList<Integer> prices) {

@@ -1,6 +1,10 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514064/homework/problems/373/submissions
 package patterns.dynamic_programming.knapsack_0_1;
-
+//Given an array A of positive elements, you have to flip the sign of some of its elements such that the resultant sum of the elements of array should be minimum non-negative(as close to zero as possible).
+//
+//Return the minimum number of elements whose sign needs to be flipped such that the resultant sum is minimum non-negative.
+//A = [15, 10, 6]
+//1
 import java.util.*;
 
 public class FlipValues {

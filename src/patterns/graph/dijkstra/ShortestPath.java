@@ -1,5 +1,7 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514064/assignment/problems/4707?navref=cl_tt_nv
 package patterns.graph.dijkstra;
+//nodes, edges given
+//Shortest path from source to destination
 
 import java.util.*;
 

@@ -1,6 +1,14 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514064/homework/problems/369/submissions
+//Largest Distance between nodes of a Tree
+//Diameter of the  tree
+//A = [-1, 0, 0]
+// input indicates parent of the index
+// index 0 = root
+//index 1- parent 0 ( edge 0-->1, 1-->0)
+//index 2 - parent 0
 
 package patterns.graph.trees;
+
 
 import java.util.*;
 

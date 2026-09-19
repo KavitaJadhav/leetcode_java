@@ -32,12 +32,5 @@ class OverLappingTimeIntervals {
         }
         resultList.add(currentInterval);
         return resultList.toArray(new int[resultList.size()][]);
-
-        // int[][] result = new int[resultList.size()][2];
-        // int resultIndex = 0;
-
-        // for(int[] interval : resultList){
-        // }
-        // return result;
     }
 }

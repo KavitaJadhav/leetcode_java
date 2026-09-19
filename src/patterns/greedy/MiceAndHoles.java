@@ -1,18 +1,23 @@
 package patterns.greedy;
+
 import java.util.*;
+
 public class MiceAndHoles {
-        public int mice(ArrayList<Integer> A, ArrayList<Integer> B) {
+    public int mice(ArrayList<Integer> mices, ArrayList<Integer> holes) {
 
-            Collections.sort(A);
-            Collections.sort(B);
+        Collections.sort(mices);
+        Collections.sort(holes);
 
-            int answer = 0;
+        int answer = 0;
 
-            for (int i = 0; i < A.size(); i++) {
-                answer = Math.max(answer,
-                        Math.abs(A.get(i) - B.get(i)));
-            }
-
-            return answer;
+        for (int index = 0; index < mices.size(); index++) {
+            answer = Math.max(answer, Math.abs(mices.get(index) - holes.get(index)));
         }
+
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new MiceAndHoles().mice(new ArrayList<>(Arrays.asList(4, -4, 2)), new ArrayList<>(Arrays.asList(4, 0, 5))));
+    }
 }

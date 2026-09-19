@@ -1,6 +1,9 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514060/homework/problems/291/submissions
 package patterns.graph.dfs;
 import  java.util.*;
+//Given character matrix A of dimensions N×M consisting of O's and X's, where O = white, X = black.
+//Return the number of black shapes. A black shape consists of one or more adjacent X's (diagonals not included)
+
 public class BlackShapes {
 
 

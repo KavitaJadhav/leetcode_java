@@ -1,6 +1,6 @@
 //https://www.scaler.com/academy/mentee-dashboard/class/514064/assignment/problems/4706?navref=cl_tt_nv
 package patterns.graph.dijkstra;
-
+// minimum distances to all nodes
 import java.util.*;
 
 public class MinimumDistances {

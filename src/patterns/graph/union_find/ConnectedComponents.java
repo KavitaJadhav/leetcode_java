@@ -31,11 +31,13 @@ public class ConnectedComponents {
 
             if (size[parent1] >= size[parent2]) {
                 parent[parent2] = parent1;
-                size[parent2] +=1;
+                size[parent1] +=size[parent2];
+                size[parent2] =0;
             }
             else {
                 parent[parent1] = parent2;
-                size[parent1] +=1;
+                size[parent2] +=size[parent1];
+                size[parent1] =0;
             }
             componenets--;
         }

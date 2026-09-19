@@ -1,12 +1,6 @@
 //https://leetcode.com/problems/coin-change-ii/
 //https://www.scaler.com/academy/mentee-dashboard/class/514056/assignment/problems/319/?navref=cl_pb_nv_tb
 
-//Loop order matters.
-//Correct:
-//for(coin)
-//for(amount)
-//If you reverse them, you count permutations instead of combinations.
-
 //This problem is a classic unbounded knapsack DP pattern.
 //Similar problems:
 //Coin Change II
@@ -38,7 +32,8 @@
 
  package patterns.dynamic_programming.knapsack_unbounded;
 
-
+//No of ways to make target amount
+// for each coin find out how many ways to make target(use combinations made by previous coins)
 public class CoinChangeII {
     public int change(int amount, int[] coins) {
         int[] result = new int[amount+1];

@@ -4,7 +4,6 @@
 package patterns.graph;
 
 import java.util.*;
-
 public class WordLadderOptimized {
     public Map<String, List<String>> buildPatternMap(List<String> words) {
         Map<String, List<String>> patternMap = new HashMap<>();
